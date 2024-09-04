@@ -26,6 +26,6 @@
 
 Cypress.Commands.add('bai_setup', () => {
     cy.visit('/slideAIDemo')
-    // Wait for site to load
+    // Wait for first slide to load
     cy.get('[placeholder^="Try a prompt"]', { timeout: 15_000})
 })
