@@ -1,0 +1,13 @@
+name: 'Cypress Test Action'
+
+on:
+  pull_request:
+
+jobs:
+  qa_test:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+      - name: Run Cypress tests
+        run: npx cypress run --spec "cypress/e2e/mktest.cy.js"

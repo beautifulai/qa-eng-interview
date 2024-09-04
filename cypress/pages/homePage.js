@@ -1,19 +1,11 @@
 class homePage{
 
-
-        elements ={
-    
-    
+        elements ={    
             prompt : () => cy.get('[placeholder^="Try a prompt"]'),
-    
-    
+            pre_gen_prompt: (promptName) => cy.contains('div', promptName),
             generateBtn : () => cy.get('[class*="GenerateButton"]')
-    
-    
         }
-    
-    
+
     }
     
-    
-    module.exports = new homePage();
+    export default new homePage();
