@@ -23,3 +23,9 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('bai_setup', () => {
+    cy.visit('/slideAIDemo')
+    // Wait for first slide to load
+    cy.get('[placeholder^="Try a prompt"]', { timeout: 15_000})
+})
